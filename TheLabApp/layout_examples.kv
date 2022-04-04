@@ -1,0 +1,118 @@
+<LayoutExamplesTabs@TabbedPanel>:
+    do_default_tab: False
+    TabbedPanelItem:
+        text: "Widget"
+        MainWidget:
+
+    TabbedPanelItem:
+        text: "Box"
+        BoxLayoutExample:
+
+    TabbedPanelItem:
+        text: "Scroll"
+        ScrollViewExample:
+
+    TabbedPanelItem:
+        text: "Stack"
+        StackLayoutExample:
+
+    TabbedPanelItem:
+        text: "Grid"
+        GridLayoutExample:
+
+    TabbedPanelItem:
+        text: "Anchor"
+        AnchorLayoutExample:
+
+<ScrollViewExample>
+    StackLayoutExample:
+        size_hint: 1, None
+        height: self.minimum_height
+
+
+<StackLayoutExample>
+
+
+<GridLayoutExample>:
+    cols:2
+    BoxLayout:
+        orientation: "vertical"
+        spacing: "10dp"
+        padding: "20dp", "10dp"
+        Button:
+            text: "BoxLayout in GridLayout"
+            on_press: root.change_text()
+        Button:
+            text: root.btn_txt
+    Button:
+        text: "B"
+    Button:
+        text: "C"
+    Button:
+        text: "D"
+
+
+<AnchorLayoutExample>
+    anchor_x: "center"
+    anchor_y: "top"
+    Button:
+        text:"Hello"
+        size: "100dp", "200dp"
+        size_hint: None, None
+    GridLayout:
+        cols: 2
+        spacing: "20dp"
+        Button:
+            text: "AnchoLauout"
+        Button:
+            text: "B"
+        Button:
+            text: "C"
+        Button:
+            text: "D"
+        BoxLayout:
+            Button:
+                text: "A"
+            Button:
+                text: "B"
+            Button:
+                text: "C"
+            Button:
+                text: "D"
+        Button:
+            text: "Hello"
+
+
+<BoxLayoutExample>
+    orientation: "vertical"
+    BoxLayout:
+        orientation: "horizontal"
+        Button:
+            text: "HUB"
+            #size: "100dp", "80dp"
+            #pos: "100dp", "200dp"
+        Button:
+            text: "LMS"
+            #size: "100dp", "80dp"
+            #pos: "100dp", "200dp"
+    Button:
+        text: "MSecurity"
+        size_hint: 1,.4
+    Button:
+        text: "Swyam NPTEL"
+        size_hint: 1,.4
+<MainWidget>
+    Button:
+        text: "Hello"
+        size: "100dp", "80dp"
+        pos: "100dp", "200dp"
+
+    Button:
+        text: "Hai Mr."
+        size: "100dp", "80dp"
+        pos: "200dp", "300dp"
+    Label:
+        text: "Hello World"
+        size: "100dp", "80dp"
+        pos: "300dp", "400dp"
+        color: 1,0,1,1
